@@ -1,0 +1,260 @@
+/* Promotion */
+.promotion {
+  background: #F2F0FF;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 100px 0 0;
+}
+
+.promotion-text {
+  width: 600px;
+  margin: auto 0;
+}
+
+.promotion-text h1 {
+  font-size: 45px;
+  margin: 0;
+}
+
+.promotion-img2 {
+  padding: 35px 0;
+}
+
+/* FeaturedProduct */
+.featured {
+  text-align: center;
+  margin: 100px 20px;
+}
+
+.featured h1 {
+  color: #151875;
+}
+
+.featured-card {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  line-height: 50%;
+  font-weight: 400;
+  margin: 20px;
+}
+
+.featured-card-img {
+  background: #F6F7FB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px 10px 10px;
+}
+
+.featured-card-img .icon-hover {
+  margin-right: auto;
+}
+
+.icon-hover {
+  visibility: hidden;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-detail {
+  visibility: hidden;
+  width: 90px;
+  height: 30px;
+  background: #08D15F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.featured-card:hover {
+  background: #2F1AC4;
+  color: white;
+}
+
+.featured-card:hover .icon-hover,
+.featured-card:hover .btn-detail {
+  visibility: visible;
+}
+
+.featured-card-in4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.featured-card-in4 p {
+  font-size: 0.9rem;
+}
+
+/* custom Slider */
+.slick-prev:before,
+.slick-next:before {
+  color: #6666668f;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FB2E86;
+}
+
+.slick-dots li button:before {
+  color: #FB2E86;
+}
+
+/* Service */
+.service {
+  text-align: center;
+  margin: 100px 20px;
+}
+
+.service h1 {
+  color: #151875;
+}
+
+.list-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 50px 0;
+}
+
+.card-service {
+  padding: 20px;
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+}
+
+/* Category */
+.category {
+  text-align: center;
+  margin: 100px 20px;
+}
+
+.category h1 {
+  color: #151875;
+}
+
+.list-categories {
+  margin: 20px 0;
+}
+
+.card-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.round {
+  position: relative;
+  /* Add position relative to create a stacking context */
+  background: #F6F7FB;
+  border-radius: 50%;
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  height: 200px;
+  width: 200px;
+}
+
+.round img {
+  height: 120px;
+}
+
+.round::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  /* Adjust the top value as needed */
+  left: -6px;
+  /* Adjust the left value as needed */
+  right: -2px;
+  /* Adjust the right value as needed */
+  bottom: -6px;
+  /* Adjust the bottom value as needed */
+  background: #9877E7;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-category:hover .round::after {
+  opacity: 1;
+}
+
+.card-category:hover .btn-detail {
+  visibility: visible;
+}
+
+/* Update */
+.update {
+  background: url('../images/Rectangle 102.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 120px;
+}
+
+/* Unique */
+.unique {
+  background: #F1F0FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 200px;
+}
+
+
+
+.unique img {
+  height: 450px;
+}
+
+.unique h1 {
+  color: #151875;
+}
+
+.unique ul {
+  list-style: none;
+}
+
+.unique ul li::before {
+  content: "• ";
+  position: absolute;
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+}
+
+.unique ul li:first-child::before {
+  color: #FB2E86;
+  /* Color for the first bullet point */
+}
+
+.unique ul li:nth-child(2)::before {
+  color: #2B2BF5;
+  /* Color for the second bullet point */
+}
+
+.unique ul li:nth-child(3)::before {
+  color: #2BF5CC;
+  /* Color for the third bullet point */
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 0%;
+}

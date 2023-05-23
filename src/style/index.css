@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  color: #0D0E43;
+}
+
+.container {
+  padding: 0 150px;
+}
+
+button {
+  color: white;
+  background: #FB2E86;
+  border-radius: 2px;
+  border: none;
+  padding: 15px 40px;
+  cursor: pointer;
+}
+
+.pink {
+  color: #FB2E86;
+}
+
+.deepblue {
+  color: #2B2BF5;
+}
+
+.lightblue {
+  color: #2BF5CC;
+}
+
+.gray {
+  color: #8A8FB9;
+}
+
+/* HeadingBar */
+.heading-bar {
+  color: #F1F1F1;
+  background: #7E33E0;
+  display: flex;
+  justify-content: flex-end;
+  height: 44px;
+}
+
+.heading-bar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.heading-bar li,
+.navbar li {
+  padding: 5px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.form-search {
+  width: 300px;
+  margin-left: auto;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  height: 40px;
+}
+
+.search input {
+  border: none;
+  font-size: 1rem;
+  width: fit-content;
+  width: 100%;
+  border: 1px solid #E7E6EF;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.btn-search {
+  border: none;
+  padding: 0;
+}
+
+.search img {
+  height: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #EEEFFB;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 50px;
+  gap: 40px;
+}
+
+.big {
+  grid-column: span 2;
+  /* This makes the third div span two columns */
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #8A8FB9;
+}
+
+.footer h1 {
+  color: #FB2E86;
+  text-shadow: 0px 2px 0px #0D0E43;
+}
