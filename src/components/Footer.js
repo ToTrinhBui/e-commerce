@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer(){
     return(
         <div className='footer'>
-            <div className='footer-part big'>
+            <div className='footer-part long'>
                 <h1>MyMy</h1>
                 <p>Contact Infor:</p>
                 <p>17 Princess Road, London, Greater London NW1 8JR, UK</p>

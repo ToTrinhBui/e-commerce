@@ -89,20 +89,6 @@
   font-size: 0.9rem;
 }
 
-/* custom Slider */
-.slick-prev:before,
-.slick-next:before {
-  color: #6666668f;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #FB2E86;
-}
-
-.slick-dots li button:before {
-  color: #FB2E86;
-}
-
 /* Service */
 .service {
   text-align: center;
@@ -150,9 +136,9 @@
 .round {
   position: relative;
   /* Add position relative to create a stacking context */
-  background: #F6F7FB;
+  background: #edeef1;
   border-radius: 50%;
-  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+  box-shadow: 0px 8px 40px rgba(107, 107, 110, 0.212);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,34 +206,22 @@
   color: #151875;
 }
 
-.unique ul {
-  list-style: none;
+.unique ul li::marker {
+  font-size: 38px; 
+  /* Notice line-height */
 }
 
-.unique ul li::before {
-  content: "• ";
-  position: absolute;
-  font-weight: bold;
-  /* If you want it to be bold */
-  display: inline-block;
-  /* Needed to add space between the bullet and the text */
-  width: 1em;
-  /* Also needed for space (tweak if needed) */
-  margin-left: -1em;
-  /* Also needed for space (tweak if needed) */
-}
-
-.unique ul li:first-child::before {
+.unique ul li:first-child::marker {
   color: #FB2E86;
   /* Color for the first bullet point */
 }
 
-.unique ul li:nth-child(2)::before {
+.unique ul li:nth-child(2)::marker {
   color: #2B2BF5;
   /* Color for the second bullet point */
 }
 
-.unique ul li:nth-child(3)::before {
+.unique ul li:nth-child(3)::marker {
   color: #2BF5CC;
   /* Color for the third bullet point */
 }

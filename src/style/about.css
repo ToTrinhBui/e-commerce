@@ -1,0 +1,148 @@
+/* Information */
+.in4 {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    margin: 80px 0;
+}
+
+.in4 h1 {
+    color: #151875;
+}
+
+.in4 p {
+    color: #8A8FB9;
+    font-size: 17px;
+}
+
+.decor-bullet {
+    display: flex;
+    gap: 40px;
+}
+
+.bullet::before {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #5625DF;
+}
+
+.bullet:nth-child(2):before {
+    background-color: #FF27B7;
+}
+
+.bullet:nth-child(3):before {
+    background-color: #37DAF3;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-part {
+    padding-inline-start: 40px;
+    position: relative;
+}
+
+.contact-part::before {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 15%;
+}
+
+.contact-part:first-child::before {
+    background-color: #5726DF;
+}
+
+.contact-part:nth-child(2):before {
+    background-color: #FB2E86;
+}
+
+.contact-part:nth-child(3):before {
+    background-color: #FFB265;
+}
+
+.contact-part:nth-child(4):before {
+    background-color: #1BE982;
+}
+
+/* InTouch */
+.intouch {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.intouch h1 {
+    color: #151875;
+}
+
+.intouch p {
+    color: #8A8FB9;
+    font-size: 17px;
+}
+
+.intouch img {
+    width: 100%;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 30px 0;
+}
+
+.input input,
+.input textarea {
+    border: 1px solid rgba(164, 182, 200, 0.7);
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.input textarea {
+    height: 6em;
+    /* Adjust the height to fit 6 lines */
+    resize: none;
+}
+
+/* Review */
+.review {
+    text-align: center;
+    background: #FBFBFF;
+    margin-top: 100px;
+    padding: 50px 300px;
+}
+
+.review img {
+    padding: 20px;
+}
+
+.review h4 {
+    font-family: 'Lato', sans-serif;
+}
+
+.review p{
+    color: #8A8FB9;
+    font-size: 17px;
+}
+
+.review p::after{
+    content: "";
+    display: block;
+    background-color: #FB2E86;
+    width: 150px;
+    height: 5px;
+    margin: 20px auto;
+
+}
