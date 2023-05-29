@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
     return (
         <div className="navbar container">
-            <h1>MyMy</h1>
+            <Link to='/'><h1>MyMy</h1></Link>
             <ul>
-                <li><Link to='/'>Home</Link></li>
+                <Link to='/'><li>Home</li></Link>
                 <li>Pages</li>
-                <li>Products</li>
+                <Link to='/products'><li>Products</li></Link>
                 <li>Blog</li>
                 <li>Shop</li>
-                <li><Link to='/about'>About</Link></li>
+                <Link to='/about'><li>About</li></Link>
             </ul>
             <form className="form-search">
                 <div className="search">

@@ -89,28 +89,6 @@
   font-size: 0.9rem;
 }
 
-/* Service */
-.service {
-  text-align: center;
-  margin: 100px 20px;
-}
-
-.service h1 {
-  color: #151875;
-}
-
-.list-services {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 40px;
-  padding: 50px 0;
-}
-
-.card-service {
-  padding: 20px;
-  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
-}
-
 /* Category */
 .category {
   text-align: center;
@@ -207,7 +185,7 @@
 }
 
 .unique ul li::marker {
-  font-size: 38px; 
+  font-size: 38px;
   /* Notice line-height */
 }
 

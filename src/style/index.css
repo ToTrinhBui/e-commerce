@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+a:hover{
+  color: #FB2E86;
+}
+
 button {
   color: white;
   background: #FB2E86;
@@ -145,10 +149,32 @@ textarea::placeholder {
   text-shadow: 0px 2px 0px #0D0E43;
 }
 
+/* Service */
+.service {
+  text-align: center;
+  margin: 100px 20px;
+}
+
+.service h1 {
+  color: #151875;
+}
+
+.list-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 50px 0;
+}
+
+.card-service {
+  padding: 20px;
+  box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+}
+
 /* custom Slider */
 .slick-prev:before,
 .slick-next:before {
-  color: #6666668f;
+  color: #8383838f;
 }
 
 .slick-dots li.slick-active button:before {
