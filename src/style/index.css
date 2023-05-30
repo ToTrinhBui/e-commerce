@@ -15,7 +15,7 @@ a {
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: #FB2E86;
 }
 
@@ -169,6 +169,59 @@ textarea::placeholder {
 .card-service {
   padding: 20px;
   box-shadow: 0px 8px 40px rgba(49, 32, 138, 0.05);
+}
+
+/* Done */
+.done {
+  text-align: center;
+  margin: 60px 150px;
+  line-height: 150%;
+  background: url('../images/Frame5.png') no-repeat;
+  background-size: cover;
+}
+
+.done * {
+  margin: 20px;
+}
+
+.done p {
+  color: #8D92A7;
+  font-size: 1rem;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a0b42e3;
+}
+
+.circle {
+  border: 3px solid hsla(323, 100%, 62%, 0.356);
+  border-top-color: #FB2E86;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* NotFound */
+.not-found {
+  text-align: center;
+  color: #152970;
+  margin-bottom: 50px;
+}
+
+.not-found img {
+  height: 350px;
 }
 
 /* custom Slider */
