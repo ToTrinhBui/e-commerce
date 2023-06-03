@@ -6,6 +6,7 @@ import Detail from './pages/Detail';
 import Cart from './pages/Cart';
 import Done from './pages/Done';
 import NotFound from './pages/NotFound';
+import ItemLiked from './pages/ItemLiked';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/success" element={<Done />} />
           <Route path="/404" element={<NotFound />} />
+          <Route path="/liked" element={<ItemLiked />} />
         </Routes>
       </BrowserRouter>
     </div>

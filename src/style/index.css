@@ -81,6 +81,14 @@ textarea::placeholder {
   align-items: center;
 }
 
+.heading-bar li {
+  color: white;
+}
+
+.heading-bar img {
+  padding: 0 2px;
+}
+
 .heading-bar li,
 .navbar li {
   padding: 5px;

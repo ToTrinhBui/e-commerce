@@ -65,8 +65,11 @@ export default function Focus() {
                             <div className="tag">Relax</div>
                         </div>
                     </div>
-
-                    <button>Add to Cart</button>
+                    <div className="focus-option">
+                        <button>Add to Cart</button>
+                        <img src={require('../../images/heart-color.png')}
+                            alt='like' />
+                    </div>
                 </div>
             </div>
         </div>
