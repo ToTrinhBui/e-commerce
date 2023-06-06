@@ -1,14 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import { useState, useEffect } from 'react';
 
-export default function Focus() {
+export default function Focus(props) {
+    const [product, setProduct] = useState('');
+
+    useEffect(() => {
+        setProduct(props.data);
+        console.log(props.data);
+    }, [props.data])
+
     const settings = {
         customPaging: function (i) {
             return (
                 <div className="img-dot">
                     <Link>
-                        <img src={require(`../../images/products/product${i + 1}.png`)}
+                        <img src={product.image}
                             alt='product' />
                     </Link>
                 </div>
@@ -28,40 +36,40 @@ export default function Focus() {
                     <Slider {...settings}>
                         <div>
                             <div className="img-focus">
-                                <img src={require('../../images/products/product1.png')}
+                                <img src={product.image}
                                     alt='product' />
                             </div>
                         </div>
                         <div>
                             <div className="img-focus">
-                                <img src={require('../../images/products/product2.png')}
+                                <img src={product.image}
                                     alt='product' />
                             </div>
                         </div>
                         <div>
                             <div className="img-focus">
-                                <img src={require('../../images/products/product3.png')}
+                                <img src={product.image}
                                     alt='product' />
                             </div>
                         </div>
                     </Slider>
                 </div>
                 <div className="right">
-                    <h1>Playwood arm chair</h1>
-                    <p>$32.00 <span>$52.00</span></p>
+                    <h1>{product.product_name}</h1>
+                    <p>${product.price} <span>${product.price + 30}</span></p>
                     <div className="focus-text">
                         <div className="tags-box">
-                            <h5>Color:</h5>
-                            <div className="tag">White</div>
+                            <h5>Status:</h5>
+                            <div className="tag">{product.availability}</div>
                         </div>
                         <div className="tags-box">
                             <h5>Category:</h5>
-                            <div className="tag">Couch</div>
+                            <div className="tag">{product.product_category}</div>
                             <div className="tag">Relax</div>
                         </div>
                         <div className="tags-box">
                             <h5>Tags:</h5>
-                            <div className="tag">Couch</div>
+                            <div className="tag">Comfortable</div>
                             <div className="tag">Relax</div>
                         </div>
                     </div>

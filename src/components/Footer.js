@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function Footer(){
-    return(
+export default function Footer() {
+    return (
         <div className='footer'>
             <div className='footer-part long'>
                 <h1>MyMy</h1>
                 <p>Contact Infor:</p>
-                <p>17 Princess Road, London, Greater London NW1 8JR, UK</p>
+                <p>Học viện Công nghệ BC-VT, Nguyễn Trãi, Hà Đông, Hà Nội</p>
             </div>
             <div className='footer-part'>
                 <h4>Categories</h4>
@@ -21,8 +21,8 @@ export default function Footer(){
                 <p>My Account</p>
                 <p>Discount</p>
                 <p>Return</p>
-                <p>Orders History</p>
-                <p>Order Tracking</p>
+                <p>Cart</p>
+                <p>Wishlist</p>
             </div>
             <div className='footer-part'>
                 <h4>Pages</h4>
