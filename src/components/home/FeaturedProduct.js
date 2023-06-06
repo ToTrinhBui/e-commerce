@@ -1,9 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
+export default function FeaturedProduct(props) {
+    const [products, setProducts] = useState([]);
 
-export default function FeaturedProduct() {
-    const cards = [1, 2, 3, 4, 5, 6];
+    useEffect(() => {
+        setProducts(props.data);
+    }, [props.data]);
+    
     const settings = {
         dots: true, // Show navigation dots
         infinite: true, // Enable infinite scrolling
@@ -19,8 +25,8 @@ export default function FeaturedProduct() {
         <div className="featured container">
             <h1>Featured Product</h1>
             <Slider {...settings}>
-                {cards.map((card, index) => (
-                    <div key={index}>
+                {products.map(product => (
+                    <Link to={`/detail/${product.id}`} key={product.id}>
                         <div className="featured-card">
                             <div className="featured-card-img">
                                 <div className="icon-hover">
@@ -31,19 +37,19 @@ export default function FeaturedProduct() {
                                     <img src={require('../../images/uil_search-plus.png')}
                                         alt='search' />
                                 </div>
-                                <img src={require('../../images/products/product1.png')}
+                                <img src={product.image} style={{ width: '180px', height: '200px'}}
                                     alt='featured-img' />
                                 <div className="btn-detail">View Details</div>
                             </div>
                             <div className='featured-card-in4'>
-                                <h4 className="pink">Cantilever chair</h4>
+                                <h4 className="pink">{product.product_name}</h4>
                                 <img src={require('../../images/line.png')}
                                     alt='line-decor' />
-                                <p>Code - Y52320</p>
-                                <p>$42.00</p>
+                                <p>Code - {product.id}</p>
+                                <p>${product.price}</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </Slider>
         </div>

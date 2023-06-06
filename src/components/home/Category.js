@@ -1,7 +1,15 @@
 import React from 'react';
 import Slider from "react-slick";
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Category() {
+export default function Category(props) {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        setProducts(props.data);
+    }, [props.data]);
+
     const settings = {
         dots: true, // Show navigation dots
         infinite: true, // Enable infinite scrolling
@@ -12,26 +20,26 @@ export default function Category() {
         autoplaySpeed: 2000,
         pauseOnHover: true
     };
-    const cards = [1, 2, 3, 4, 5, 6];
+    
     return (
         <div className='category container'>
             <h1>Top Categories</h1>
             <div className='list-categories'>
                 <Slider {...settings}>
-                    {cards.map((card, index) => (
-                        <div key={index}>
+                    {products.map((product) => (
+                        <Link to={`/detail/${product.id}`} key={product.id}>
                             <div className='card-category'>
                                 <div className='round'>
-                                    <img src={require('../../images/products/product1.png')}
+                                    <img src={product.image}
                                         alt='featured-img' />
                                     <div className="btn-detail">View Details</div>
                                 </div>
                                 <div>
-                                    <h5>Mini LCW Chair</h5>
-                                    <p>$56.00</p>
+                                    <h5>{product.product_name}</h5>
+                                    <p>${product.price}</p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </Slider >
             </div>

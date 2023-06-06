@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Unique() {
     return (
@@ -13,7 +14,7 @@ export default function Unique() {
                     <li>Arms, backs and seats are structurally reinforced</li>
                 </ul>
                 <div className='btn-add'>
-                    <button>Add To Card</button>
+                    <Link to={`/detail/FUN001`}><button>Add To Card</button></Link>
                     <div>
                         <h5>B&B Italian Sofa</h5>
                         <p>$32.00</p>
