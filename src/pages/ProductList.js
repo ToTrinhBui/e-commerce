@@ -3,6 +3,8 @@ import React from "react";
 import '../style/index.css';
 import '../style/productList.css';
 
+import { products } from "../data";
+
 import HeadingBar from "../components/HeadingBar";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -13,7 +15,7 @@ export default function ProductList() {
         <>
             <HeadingBar />
             <Navbar />
-            <Grid/>
+            <Grid data={products}/>
             <Footer/>
         </>
     )

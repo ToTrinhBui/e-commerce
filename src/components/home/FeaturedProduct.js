@@ -1,9 +1,17 @@
 import React from "react";
 import Slider from "react-slick";
+import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 
-export default function FeaturedProduct() {
-    const cards = [1, 2, 3, 4, 5, 6];
+export default function FeaturedProduct(props) {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const list = [...props.data].reverse();;
+        setProducts(list.slice(0, 6));
+    }, [props.data]);
+
     const settings = {
         dots: true, // Show navigation dots
         infinite: true, // Enable infinite scrolling
@@ -19,29 +27,31 @@ export default function FeaturedProduct() {
         <div className="featured container">
             <h1>Featured Product</h1>
             <Slider {...settings}>
-                {cards.map((card, index) => (
-                    <div key={index}>
-                        <div className="featured-card">
+                {products.map(product => (
+                    <div key={product.id}>
+                        <div className="featured-card" >
                             <div className="featured-card-img">
                                 <div className="icon-hover">
                                     <img src={require('../../images/Group 28.png')}
                                         alt='cart' />
                                     <img src={require('../../images/uil_heart-alt.png')}
                                         alt='heart' />
-                                    <img src={require('../../images/uil_search-plus.png')}
-                                        alt='search' />
                                 </div>
-                                <img src={require('../../images/products/product1.png')}
+                                <img src={product.image} style={{ width: '180px', height: '180px' }}
                                     alt='featured-img' />
-                                <div className="btn-detail">View Details</div>
+                                <Link to={`/detail/${product.id}`}>
+                                    <div className="btn-detail">View Details</div>
+                                </Link>
                             </div>
-                            <div className='featured-card-in4'>
-                                <h4 className="pink">Cantilever chair</h4>
-                                <img src={require('../../images/line.png')}
-                                    alt='line-decor' />
-                                <p>Code - Y52320</p>
-                                <p>$42.00</p>
-                            </div>
+                            <Link to={`/detail/${product.id}`}>
+                                <div className='featured-card-in4'>
+                                    <h4 className="pink">{product.name}</h4>
+                                    <img src={require('../../images/line.png')}
+                                        alt='line-decor' />
+                                    <p>Code - {product.id}</p>
+                                    <p>${product.price}</p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 ))}
