@@ -8,12 +8,16 @@
 
 .promotion-text {
   width: 600px;
-  margin: auto 0;
+  margin: auto 20px;
 }
 
 .promotion-text h1 {
   font-size: 45px;
   margin: 0;
+}
+
+.promotion-text p {
+  line-height: 150%;
 }
 
 .promotion-img2 {
@@ -209,7 +213,7 @@
   line-height: 0%;
 }
 
-.btn-add p{
+.btn-add p {
   font-size: 15px;
   color: #FB2E86;
 }

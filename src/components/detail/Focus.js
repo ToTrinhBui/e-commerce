@@ -63,7 +63,7 @@ export default function Focus(props) {
                         </div>
                         <div className="tags-box">
                             <h5>Category:</h5>
-                            <div className="tag">{product.category}</div>
+                            <Link to={`/categories/${product.category}`}><div className="tag">{product.category}</div></Link>
                             <div className="tag">Relax</div>
                         </div>
                         <div className="tags-box">

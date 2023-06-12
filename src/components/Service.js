@@ -8,22 +8,22 @@ export default function Service(){
                 <div className='card-service'>
                     <img src={require('../images/services/free-delivery 1.png')} alt='service'/>
                     <h4>24/7 Support</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                    <p>Customers will be taken care of 24/7</p>
                 </div>
                 <div className='card-service'>
                     <img src={require('../images/services/cashback 1.png')} alt='service'/>
                     <h4>24/7 Support</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                    <p>Customers will be taken care of 24/7</p>
                 </div>
                 <div className='card-service'>
                     <img src={require('../images/services/premium-quality 1.png')} alt='service'/>
                     <h4>24/7 Support</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                    <p>Customers will be taken care of 24/7</p>
                 </div>
                 <div className='card-service'>
                     <img src={require('../images/services/24-hours-support 1.png')} alt='service'/>
                     <h4>24/7 Support</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                    <p>Customers will be taken care of 24/7</p>
                 </div>
             </div>
         </div>

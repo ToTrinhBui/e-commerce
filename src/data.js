@@ -20,7 +20,7 @@ export const products = [
         image: product1,
         description: 'Elegant and comfortable, this white chair is a perfect addition to any room. Its sleek design and sturdy construction make it a versatile choice for both home and office spaces.',
         available: '20',
-        category: 'funiture',
+        category: 'furniture',
         price: 50,
     },
     {
@@ -29,7 +29,7 @@ export const products = [
         image: product2,
         description: 'Indulge in luxurious comfort with this pink armchair. Its plush cushions and stylish design create a cozy and inviting seating option that adds a pop of color to your living space.',
         available: '20',
-        category: 'funiture',
+        category: 'furniture',
         price: 80,
     },
     {
@@ -38,7 +38,7 @@ export const products = [
         image: product3,
         description: 'Add a touch of sophistication to your interior with this gray chair. Its modern design and neutral color make it a versatile choice for various decor styles, while the ergonomic construction ensures maximum comfort.',
         available: '20',
-        category: 'funiture',
+        category: 'furniture',
         price: 120,
     },
     {
@@ -47,7 +47,7 @@ export const products = [
         image: product4,
         description: 'Convenience meets style with this blue folding chair. Perfect for indoor and outdoor use, its foldable design allows for easy storage and transport, while the vibrant blue color adds a cheerful vibe to any setting.',
         available: '20',
-        category: 'funiture',
+        category: 'furniture',
         price: 80,
     },
     {
@@ -56,7 +56,7 @@ export const products = [
         image: product5,
         description: 'Make a bold statement with this vibrant red chair. Its eye-catching color and sleek design make it a standout piece in any room, providing both comfort and a touch of modern flair.',
         available: '20',
-        category: 'funiture',
+        category: 'furniture',
         price: 75,
     },
     {
@@ -65,7 +65,7 @@ export const products = [
         image: product6,
         description: 'Create a cozy and inviting atmosphere with this beige chair. Its neutral tone blends seamlessly with any decor, while the comfortable padding and sturdy construction ensure long-lasting comfort.',
         available: '20',
-        category: 'funiture',
+        category: 'furniture',
         price: 90,
     },
     {
@@ -74,7 +74,7 @@ export const products = [
         image: product7,
         description: 'Perfect for gatherings and events, this folding chair offers both convenience and functionality. Its lightweight design and foldable feature make it easy to store and transport, while the durable materials guarantee stability and support.',
         available: '20',
-        category: 'funiture',
+        category: 'furniture',
         price: 100,
     },
     {
@@ -83,7 +83,7 @@ export const products = [
         image: product8,
         description: 'Experience the epitome of luxury and craftsmanship with this B&B Italian Sofa. Designed to exude elegance and sophistication, this sofa boasts premium materials and meticulous attention to detail, providing exceptional comfort and style.',
         available: '20',
-        category: 'funiture',
+        category: 'furniture',
         price: 120,
     },
     {

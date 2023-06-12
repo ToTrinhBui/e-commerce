@@ -100,6 +100,14 @@ textarea::placeholder {
   align-items: center;
 }
 
+.navbar a {
+  color: #151875;
+}
+
+.navbar a:hover {
+  color: #FB2E86;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -136,6 +144,44 @@ textarea::placeholder {
 
 .search img {
   height: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: #151875;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-toggle {
+  color: #FB2E86;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  padding: 8px 10px;
+  cursor: pointer;
+  color: #151875;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
 }
 
 /* Footer */

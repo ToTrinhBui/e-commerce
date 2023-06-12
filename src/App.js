@@ -7,6 +7,7 @@ import Cart from './pages/Cart';
 import Done from './pages/Done';
 import NotFound from './pages/NotFound';
 import ItemLiked from './pages/ItemLiked';
+import Category from './pages/Category';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/success" element={<Done />} />
-          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="/liked" element={<ItemLiked />} />
+          <Route path="/categories/:category" element={<Category />} />
         </Routes>
       </BrowserRouter>
     </div>
