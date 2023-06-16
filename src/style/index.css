@@ -54,6 +54,10 @@ button {
   /* This makes the third div span two columns */
 }
 
+.btn {
+  cursor: pointer;
+}
+
 input,
 textarea {
   outline: none;
@@ -92,6 +96,26 @@ textarea::placeholder {
 .heading-bar li,
 .navbar li {
   padding: 5px;
+}
+
+.icon-cart {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.cart-noti {
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  right: -5px;
+  top: 2px;
 }
 
 /* Navbar */

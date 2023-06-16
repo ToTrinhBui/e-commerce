@@ -22,7 +22,6 @@ export default function Detail() {
 
     useEffect(() => {
         setProduct(products.find((item) => item.id === id));
-        console.log(products.find((item) => item.id === id));
     }, [id])
 
 

@@ -12,8 +12,18 @@ import product11 from './images/products/product11.png';
 import product12 from './images/products/product12.png';
 import product13 from './images/products/product13.png';
 import product14 from './images/products/product14.png';
+import product0 from './images/products/product0.png';
 
 export const products = [
+    {
+        id: '0',
+        name: 'Lamp',
+        image: product0,
+        description: 'Introducing our elegant and versatile lamp. Sleek design, reliable construction, perfect for any room. Illuminate your space with style and functionality. Get yours now!',
+        available: '5',
+        category: 'furniture',
+        price: 30,
+    },
     {
         id: '1',
         name: 'White Chair',

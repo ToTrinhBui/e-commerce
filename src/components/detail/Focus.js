@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 export default function Focus(props) {
     const [product, setProduct] = useState('');
+    const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
         setProduct(props.data);
@@ -73,7 +75,7 @@ export default function Focus(props) {
                         </div>
                     </div>
                     <div className="focus-option">
-                        <button>Add to Cart</button>
+                        <button onClick={() => addToCart(product.id)}>Add to Cart</button>
                         <img src={require('../../images/heart-color.png')}
                             alt='like' />
                     </div>

@@ -1,9 +1,11 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from "../../context/CartContext";
 
 export default function Grid(props) {
     const [products, setProducts] = useState([]);
+    const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
         setProducts(props.data);
@@ -14,13 +16,15 @@ export default function Grid(props) {
                 <div key={product.id} className='card-grid'>
                     <div className='card-grid-img'>
                         <div className="card-grid-icon-hover">
-                            <img src={require('../../images/Group 28.png')}
+                            <div className='btn' onClick={() => addToCart(product.id)}>
+                                <img src={require('../../images/Group 28.png')}
                                 alt='cart' />
+                            </div>
                             <img src={require('../../images/uil_heart-alt.png')}
                                 alt='heart' />
                             <Link to={`/detail/${product.id}`}>
                                 <img src={require('../../images/uil_search-plus.png')}
-                                    alt='search' style={{'width': '18px'}}/>
+                                    alt='search' style={{ 'width': '18px' }} />
                             </Link>
                         </div>
                         <div className=''>

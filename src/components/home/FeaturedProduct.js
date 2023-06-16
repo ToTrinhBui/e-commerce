@@ -1,11 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from 'react-router-dom';
+import { CartContext } from "../../context/CartContext";
 
 
 export default function FeaturedProduct(props) {
     const [products, setProducts] = useState([]);
+    const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
         const list = [...props.data].reverse();;
@@ -32,8 +34,10 @@ export default function FeaturedProduct(props) {
                         <div className="featured-card" >
                             <div className="featured-card-img">
                                 <div className="icon-hover">
-                                    <img src={require('../../images/Group 28.png')}
-                                        alt='cart' />
+                                    <div className="btn" onClick={() => addToCart(product.id)}>
+                                        <img src={require('../../images/Group 28.png')}
+                                            alt='cart' />
+                                    </div>
                                     <img src={require('../../images/uil_heart-alt.png')}
                                         alt='heart' />
                                 </div>
