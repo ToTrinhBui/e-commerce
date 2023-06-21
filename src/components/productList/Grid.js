@@ -2,10 +2,12 @@ import React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from "../../context/CartContext";
+import { LikeContext } from '../../context/LikeContext';
 
 export default function Grid(props) {
     const [products, setProducts] = useState([]);
     const { addToCart } = useContext(CartContext);
+    const { like, unlike, isLiked } = useContext(LikeContext);
 
     useEffect(() => {
         setProducts(props.data);
@@ -18,10 +20,18 @@ export default function Grid(props) {
                         <div className="card-grid-icon-hover">
                             <div className='btn' onClick={() => addToCart(product.id)}>
                                 <img src={require('../../images/Group 28.png')}
-                                alt='cart' />
+                                    alt='cart' />
                             </div>
-                            <img src={require('../../images/uil_heart-alt.png')}
-                                alt='heart' />
+                            {isLiked(product.id) ? (
+                                <div className='btn' onClick={() => unlike(product.id)}>
+                                    <img src={require('../../images/full-heart.png')}
+                                        alt='full-heart' style={{ 'width': '21px' }} />
+                                </div>) : (
+                                <div className='btn' onClick={() => like(product.id)}>
+                                    <img src={require('../../images/uil_heart-alt.png')}
+                                        alt='heart' />
+                                </div>)
+                            }
                             <Link to={`/detail/${product.id}`}>
                                 <img src={require('../../images/uil_search-plus.png')}
                                     alt='search' style={{ 'width': '18px' }} />

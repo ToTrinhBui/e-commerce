@@ -3,11 +3,13 @@ import Slider from "react-slick";
 import { useState, useEffect, useContext } from "react";
 import { Link } from 'react-router-dom';
 import { CartContext } from "../../context/CartContext";
+import { LikeContext } from "../../context/LikeContext";
 
 
 export default function FeaturedProduct(props) {
     const [products, setProducts] = useState([]);
     const { addToCart } = useContext(CartContext);
+    const { like, unlike, isLiked } = useContext(LikeContext);
 
     useEffect(() => {
         const list = [...props.data].reverse();;
@@ -38,8 +40,16 @@ export default function FeaturedProduct(props) {
                                         <img src={require('../../images/Group 28.png')}
                                             alt='cart' />
                                     </div>
-                                    <img src={require('../../images/uil_heart-alt.png')}
-                                        alt='heart' />
+                                    {isLiked(product.id) ? (
+                                        <div className='btn' onClick={() => unlike(product.id)}>
+                                            <img src={require('../../images/full-heart.png')}
+                                                alt='full-heart' style={{ 'width': '21px' }} />
+                                        </div>) : (
+                                        <div className='btn' onClick={() => like(product.id)}>
+                                            <img src={require('../../images/uil_heart-alt.png')}
+                                                alt='heart' />
+                                        </div>)
+                                    }
                                 </div>
                                 <img src={product.image} style={{ width: '180px', height: '180px' }}
                                     alt='featured-img' />

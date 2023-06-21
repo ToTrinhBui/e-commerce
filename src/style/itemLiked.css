@@ -1,5 +1,5 @@
-.item{
-    margin: 50px ;
+.item {
+    margin: 50px;
 }
 
 .card-item {
@@ -44,6 +44,11 @@
 
 .item-title img {
     height: 32px;
+}
+
+.item-option {
+    display: flex;
+    align-items: center;
 }
 
 .item-option img {

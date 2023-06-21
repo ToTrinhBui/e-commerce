@@ -68,7 +68,7 @@ export default function CartContextProvider(props) {
         getCountItems,
         clearCart,
     };
-    console.log(cartItems)
+    //    console.log(cartItems)
     return (
         <CartContext.Provider value={contextValue}>
             {props.children}
