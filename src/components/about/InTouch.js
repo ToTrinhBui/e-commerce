@@ -5,7 +5,7 @@ export default function InTouch(){
         <div className='intouch container'>
             <div className='left'>
                 <h1>Get In Touch</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices  tristique amet erat vitae eget dolor los vitae lobortis quis bibendum quam.</p>
+                <p>Feel free to reach out to our dedicated support team for any inquiries or assistance with your e-commerce needs.</p>
                 <div className='input'>
                     <div>
                         <input placeholder='Your Name*' />

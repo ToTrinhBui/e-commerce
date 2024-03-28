@@ -7,7 +7,7 @@ export default function Promotion() {
     return (
         <div className='promotion'>
             {/* With a 50% size reduction (1/0.8=1.25) */}
-            <img srcSet={`${promotion1} 1.5x`} alt='promotion' />
+            <img className='promotion-img1' srcSet={`${promotion1} 1.5x`} alt='promotion' />
             <div className='promotion-text'>
                 <h4 className='pink'>Best Furniture For Your Castle...</h4>
                 <h1>New Furniture Collection Trends in 2023</h1>

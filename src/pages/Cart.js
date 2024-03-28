@@ -32,15 +32,17 @@ export default function Cart() {
     }, [cartItems]);
 
     return (
-        <>
-            <HeadingBar />
-            <Navbar />
-            <Total
-                data={productInCart} total={totalAmount}
-                clearCart={clearCart} addToCart={addToCart}
-                removeFromCart={removeFromCart} deleteFromCart={deleteFromCart}
-            />
+        <div className='page-container'>
+            <div className='content-wrap'>
+                <HeadingBar />
+                <Navbar />
+                <Total
+                    data={productInCart} total={totalAmount}
+                    clearCart={clearCart} addToCart={addToCart}
+                    removeFromCart={removeFromCart} deleteFromCart={deleteFromCart}
+                />
+            </div>
             <Footer />
-        </>
+        </div>
     )
 }

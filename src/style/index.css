@@ -7,6 +7,23 @@ body {
   color: #0D0E43;
 }
 
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 270px;
+  /* Footer height */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #EEEFFB;
+}
+
 .container {
   padding: 0 150px;
 }
@@ -49,6 +66,14 @@ button {
   width: 50%;
 }
 
+.right {
+  margin-left: auto;
+}
+
+.left {
+  margin-right: auto;
+}
+
 .long {
   grid-column: span 2;
   /* This makes the third div span two columns */
@@ -71,18 +96,25 @@ textarea::placeholder {
 }
 
 /* HeadingBar */
+.heading-bar-outer {
+  position: fixed;
+  z-index: 100;
+  height: 44px;
+  width: 100%;
+}
+
 .heading-bar {
   color: #F1F1F1;
   background: #7E33E0;
   display: flex;
   justify-content: flex-end;
-  height: 44px;
 }
 
 .heading-bar ul {
   display: flex;
   list-style: none;
   align-items: center;
+  margin: 0;
 }
 
 .heading-bar li {
@@ -119,9 +151,14 @@ textarea::placeholder {
 }
 
 /* Navbar */
+.navbar-outer {
+  padding-top: 44px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navbar a {
@@ -139,22 +176,21 @@ textarea::placeholder {
 }
 
 .form-search {
-  width: 300px;
   margin-left: auto;
 }
 
 .search {
-  display: grid;
-  grid-template-columns: 6fr 1fr;
+  display: flex;
+  align-items: center;
   height: 40px;
 }
 
 .search input {
   border: none;
   font-size: 1rem;
-  width: fit-content;
-  width: 100%;
   border: 1px solid #E7E6EF;
+  height: 38px;
+  width: 220px;
 }
 
 .search input:focus {
@@ -164,10 +200,8 @@ textarea::placeholder {
 .btn-search {
   border: none;
   padding: 0;
-}
-
-.search img {
-  height: 20px;
+  height: 42px;
+  width: 42px;
 }
 
 .dropdown {
@@ -210,10 +244,9 @@ textarea::placeholder {
 
 /* Footer */
 .footer {
-  background: #EEEFFB;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  padding: 50px;
+  padding: 20px;
   gap: 40px;
 }
 
@@ -239,7 +272,7 @@ textarea::placeholder {
 
 .list-services {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 40px;
   padding: 50px 0;
 }
@@ -252,10 +285,11 @@ textarea::placeholder {
 /* Done */
 .done {
   text-align: center;
-  margin: 60px 150px;
+  margin: 60px 80px;
   line-height: 150%;
   background: url('../images/Frame5.png') no-repeat;
-  background-size: cover;
+  background-size: auto;
+  min-height: 400px;
 }
 
 .done * {
@@ -299,7 +333,7 @@ textarea::placeholder {
 }
 
 .not-found img {
-  height: 350px;
+  width: 60%;
 }
 
 /* custom Slider */
@@ -314,4 +348,52 @@ textarea::placeholder {
 
 .slick-dots li button:before {
   color: #FB2E86;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  /* Navbar */
+  .search {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0px 25px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0 5px;
+  }
+
+  .navbar ul {
+    padding-left: 10px;
+    margin: 0;
+  }
+
+  /* Footer */
+  .footer {
+    gap: 15px;
+  }
+
+  /* Service */
+  .service {
+    margin: 60px 0px;
+  }
+
+  .list-services {
+    padding: 0;
+    gap: 15px;
+  }
+
+  .card-service {
+    padding: 10px;
+  }
+
+  /* Done */
+  .done {
+    margin: 40px 10px;
+  }
 }

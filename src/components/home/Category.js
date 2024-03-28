@@ -16,7 +16,7 @@ export default function Category(props) {
         speed: 500, // Transition speed in milliseconds
         slidesToShow: 3, // Number of slides to show at a time
         slidesToScroll: 3, // Number of slides to scroll at a time
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         pauseOnHover: true
     };

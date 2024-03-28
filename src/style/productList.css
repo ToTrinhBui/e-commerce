@@ -1,7 +1,7 @@
 /* Grid */
 .grid-product {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 50px;
     margin: 50px 0;
     text-align: center;
@@ -72,17 +72,25 @@
     text-decoration: line-through;
 }
 
-.card-grid:hover .card-grid-icon-hover{
+.card-grid:hover .card-grid-icon-hover {
     visibility: visible;
 }
 
-.card-grid:hover .card-grid-img{
+.card-grid:hover .card-grid-img {
     background: #def0ee;
 }
 
 /* Title */
-.title{
+.title {
     background: #F6F5FF;
     padding: 5px 150px;
     color: #101750;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* Title */
+    .title {
+        padding: 5px 25px;
+    }
 }

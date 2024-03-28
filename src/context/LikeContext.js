@@ -44,7 +44,7 @@ export default function LikeContextProvider(props) {
         unlike,
         isLiked,
     };
-    console.log(likedItems)
+    // console.log(likedItems)
     return (
         <LikeContext.Provider value={contextValue}>
             {props.children}

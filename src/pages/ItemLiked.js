@@ -17,14 +17,17 @@ export default function ProductList() {
     const { likedItems, unlike } = useContext(LikeContext);
 
     useEffect(() => {
-        setProductInList(products.filter((product)=> likedItems[product.id]===1));
-    }, [productInList, likedItems]);
+        setProductInList(products.filter((product) => likedItems[product.id] === 1));
+    }, [likedItems]);
+    
     return (
-        <>
-            <HeadingBar />
-            <Navbar />
-            <Item data={productInList} unlike={unlike} />
-            <Footer/>
-        </>
+        <div className="page-container">
+            <div className="content-wrap">
+                <HeadingBar />
+                <Navbar />
+                <Item data={productInList} unlike={unlike} />
+            </div>
+            <Footer />
+        </div>
     )
 }

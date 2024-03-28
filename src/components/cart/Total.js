@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Total(props) {
     const [products, setProducts] = useState([]);
@@ -12,7 +12,7 @@ export default function Total(props) {
 
     return (
         <div className="cart container">
-            <div className="left">
+            <div className="cart-left">
                 {products.length === 0 ? <h4>Your Cart Is Empty</h4> :
                     <div>
                         <table>
@@ -29,11 +29,16 @@ export default function Total(props) {
                                 {products.map((product) => (
                                     <tr key={product.id}>
                                         <td className="product-description">
-                                            <img src={product.image}
-                                                alt='product' />
+                                            <Link to={`/detail/${product.id}`}>
+                                                <img src={product.image} alt='product' />
+                                            </Link>
                                             <div className="product-description-text">
-                                                <h5>{product.name}</h5>
-                                                <p>Category: {product.category}</p>
+                                                <Link to={`/detail/${product.id}`}>
+                                                    <h5>{product.name}</h5>
+                                                </Link>
+                                                <Link to={`/categories/${product.category}`}>
+                                                    <p>Category: {product.category}</p>
+                                                </Link>
                                             </div>
                                         </td>
                                         <td>${product.price}</td>
@@ -58,7 +63,7 @@ export default function Total(props) {
                     </div>
                 }
             </div>
-            <div className="right">
+            <div className="cart-right">
                 <h3>Cart Totals</h3>
                 <div className="calculate">
                     <div className="calculate-part">

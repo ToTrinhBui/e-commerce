@@ -20,7 +20,6 @@ export default function Category() {
 
     useEffect(() => {
         setProduct(products.filter((item) => item.category === category));
-        console.log(products.filter((item) => item.category === category));
     }, [category])
 
 
@@ -28,12 +27,14 @@ export default function Category() {
         return <Loading />;
     }
     return (
-        <>
-            <HeadingBar />
-            <Navbar />
-            <Title title={category}/>
-            <Grid data={product}/>
-            <Footer/>
-        </>
+        <div className="page-container">
+            <div className="content-wrap">
+                <HeadingBar />
+                <Navbar />
+                <Title title={category} />
+                <Grid data={product} />
+            </div>
+            <Footer />
+        </div>
     )
 }

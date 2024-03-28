@@ -15,7 +15,7 @@ export default function Unique() {
                 </ul>
                 <div className='btn-add'>
                     <Link to='detail/8'><button>More details</button></Link>
-                    <div>
+                    <div className='item-note'>
                         <h5>B&B Italian Sofa</h5>
                         <p>Discount 20%</p>
                     </div>

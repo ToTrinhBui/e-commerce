@@ -37,16 +37,18 @@ export default function Home() {
     }
 
     return (
-        <>
-            <HeadingBar />
-            <Navbar />
-            <Promotion />
-            <FeaturedProduct data={products} />
-            <Update />
-            <Category data={products} />
-            <Unique />
-            <Service />
+        <div className="page-container">
+            <div className="content-wrap">
+                <HeadingBar />
+                <Navbar />
+                <Promotion />
+                <FeaturedProduct data={products} />
+                <Update />
+                <Category data={products} />
+                <Unique />
+                <Service />
+            </div>
             <Footer />
-        </>
+        </div>
     )
 }

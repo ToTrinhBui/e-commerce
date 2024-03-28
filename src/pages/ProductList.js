@@ -13,12 +13,14 @@ import Title from "../components/productList/Title";
 
 export default function ProductList() {
     return (
-        <>
-            <HeadingBar />
-            <Navbar />
-            <Title title='All products'/>
-            <Grid data={products}/>
-            <Footer/>
-        </>
+        <div className="page-container">
+            <div className="content-wrap">
+                <HeadingBar />
+                <Navbar />
+                <Title title='All products' />
+                <Grid data={products} />
+            </div>
+            <Footer />
+        </div>
     )
 }

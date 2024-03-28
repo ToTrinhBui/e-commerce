@@ -30,13 +30,15 @@ export default function Detail() {
     }
 
     return (
-        <>
-            <HeadingBar />
-            <Navbar />
-            <Focus data={product} />
-            <ProductIn4 data={product} />
-            <Related data={products} />
+        <div className='page-container'>
+            <div className='content-wrap'>
+                <HeadingBar />
+                <Navbar />
+                <Focus data={product} />
+                <ProductIn4 data={product} />
+                <Related data={products} />
+            </div>
             <Footer />
-        </>
+        </div>
     )
 }

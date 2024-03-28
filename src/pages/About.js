@@ -12,14 +12,16 @@ import Review from "../components/about/Review";
 
 export default function About() {
     return (
-        <>
-            <HeadingBar />
-            <Navbar />
-            <Information />
-            <InTouch/>
-            <Review />
-            <Service />
+        <div className="page-container">
+            <div className="content-wrap">
+                <HeadingBar />
+                <Navbar />
+                <Information />
+                <InTouch />
+                <Review />
+                <Service />
+            </div>
             <Footer />
-        </>
+        </div>
     )
 }
