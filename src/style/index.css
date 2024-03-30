@@ -336,6 +336,39 @@ textarea::placeholder {
   width: 60%;
 }
 
+/* Notification */
+.overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 65px;
+  right: 0px;
+}
+
+.notification {
+  background-color: #ffffff;
+}
+
+.noti-content {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background: #7e33e02a;
+  border-left: 4px solid #FB2E86;
+  right: -200px;
+  transition: right 1s ease;
+}
+
+.show-notification .noti-content {
+  right: 0;
+}
+
+.noti-content p {
+  font-size: 15px;
+  margin: 5px;
+  text-align: center;
+}
+
 /* custom Slider */
 .slick-prev:before,
 .slick-next:before {

@@ -17,12 +17,14 @@ export default function CartContextProvider(props) {
         // Retrieve cart items from localStorage or use default cart if not present
         const storedCartItems = localStorage.getItem("cartItems");
         return storedCartItems ? JSON.parse(storedCartItems) : getDefaultCart();
-      });
-    
-      useEffect(() => {
+    });
+
+    const [showNotification, setShowNotification] = useState(false);
+
+    useEffect(() => {
         // Update localStorage whenever cartItems change
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      }, [cartItems]);
+    }, [cartItems]);
 
     function getTotalCartAmount() {
         let totalAmount = 0;
@@ -45,6 +47,11 @@ export default function CartContextProvider(props) {
 
     function addToCart(itemId) {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+
+        setShowNotification(true);
+        setTimeout(() => {
+            setShowNotification(false);
+        }, 1500);
     };
 
     function removeFromCart(itemId) {
@@ -61,6 +68,7 @@ export default function CartContextProvider(props) {
 
     const contextValue = {
         cartItems,
+        showNotification,
         addToCart,
         removeFromCart,
         deleteFromCart,
