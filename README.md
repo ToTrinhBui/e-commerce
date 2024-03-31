@@ -2,7 +2,7 @@
 This minimalist e-commerce website, built with React and styled with CSS.
 
 ## Demo
-Explore the live demo to experience the simplicity and functionality firsthand: [Live Demo](e-commerce-totrinhbui.vercel.app)
+Explore the live demo to experience the simplicity and functionality firsthand: [Live Demo](https://e-commerce-totrinhbui.vercel.app/)
 
 ## Installation
 To set up the project on your local machine, follow these steps:
