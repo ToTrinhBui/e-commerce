@@ -11,6 +11,7 @@ import ItemLiked from './pages/ItemLiked';
 import Category from './pages/Category';
 import { CartContext } from './context/CartContext';
 import Notification from './components/Notification';
+import Search from './pages/Search';
 
 function App() {
   const { showNotification } = useContext(CartContext);
@@ -28,6 +29,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/liked" element={<ItemLiked />} />
           <Route path="/categories/:category" element={<Category />} />
+          <Route path='/search' element={<Search />} />
         </Routes>
       </BrowserRouter>
       {showNotification && <Notification />}

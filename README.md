@@ -1,5 +1,5 @@
 # Overview
-This minimalist e-commerce website, built with React and styled with CSS.
+This minimalist e-commerce website is built with React and styled with CSS.
 
 ## Demo
 Explore the live demo to experience the simplicity and functionality firsthand: [Live Demo](https://e-commerce-totrinhbui.vercel.app/)
@@ -15,7 +15,18 @@ To set up the project on your local machine, follow these steps:
 This application was crafted using:
 - React
 - CSS
-- The design inspiration comes from [Saber Ali](https://www.figma.com/community/file/967759864749832815).
+- The design comes from [Saber Ali](https://www.figma.com/community/file/967759864749832815).
+
+## Feature pages
+- Home
+- About
+- Products by Categories
+- Product Detail
+- Shopping Cart
+- Wishlist
+- Search Functionality
+- Checkout Process
+- 404
 
 ## Screenshots
 Take a glimpse at some key pages of the website:
