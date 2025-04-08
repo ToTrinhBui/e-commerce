@@ -34,7 +34,7 @@ export default function Total(props) {
                                             </Link>
                                             <div className="product-description-text">
                                                 <Link to={`/detail/${product.id}`}>
-                                                    <h5>{product.name}</h5>
+                                                    <h5 className="truncate">{product.name}</h5>
                                                 </Link>
                                                 <Link to={`/categories/${product.category}`}>
                                                     <p>Category: {product.category}</p>

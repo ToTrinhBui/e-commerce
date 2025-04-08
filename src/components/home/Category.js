@@ -37,7 +37,7 @@ export default function Category(props) {
                                     </Link>
                                 </div>
                                 <div>
-                                    <h5>{product.name}</h5>
+                                    <h5 className='truncate'>{product.name}</h5>
                                     <p>${product.price}</p>
                                 </div>
                             </div>

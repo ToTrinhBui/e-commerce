@@ -1,64 +1,108 @@
+.list-item {
+  margin: 50px 0px;
+}
+
 .item {
-    margin: 50px 0px;
+  margin: 30px 0;
 }
 
 .card-item {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    margin: 30px 0;
-    box-shadow: 0px 0px 25px 5px rgba(234, 234, 250, 0.5);
+  height: 185px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 25px 5px rgba(234, 234, 250, 0.5);
+}
+
+.card-item-left {
+  display: flex;
+}
+
+.item-img {
+  width: 300px;
+  display: flex;
+  flex-shrink: 0;
+  margin: 5px;
+  padding: 10px 0;
+  justify-content: center;
+  background-color: #f6f7fb;
 }
 
 .item-img img {
-    height: 150px;
-    padding: 10px 50px;
-    margin: 5px;
-    background-color: #F6F7FB;
+  height: 155px;
 }
 
 .item-in4 {
-    width: 100%;
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .item-in4 p {
-    color: #111C85;
-    font-size: 17px;
+  color: #111c85;
+  font-size: 17px;
 }
 
 .item-in4 span {
-    text-decoration: line-through;
-    color: #FF2AAA;
+  text-decoration: line-through;
+  color: #ff2aaa;
 }
 
 .item-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .item-liked {
-    margin-left: auto;
-    padding: 15px;
-}
-
-.item-title img {
-    height: 32px;
+  padding: 20px 30px;
 }
 
 .item-option {
-    display: flex;
-    align-items: center;
-    gap: 10px
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .item-option .option-part {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 27.6087px rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 27.6087px rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .item-img {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card-item {
+    height: 120px;
+  }
+
+  .item-img {
+    width: 115px;
+  }
+
+  .item-img img {
+    height: 90px;
+  }
+
+  .item-in4 h3 {
+    font-size: 17px;
+    margin: 5px 0;
+  }
+
+  .item-in4 p {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+
+  .item-liked {
+    padding: 10px 5px;
+  }
 }

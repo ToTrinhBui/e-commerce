@@ -1,19 +1,21 @@
 body {
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
-  color: #0D0E43;
+  color: #0d0e43;
 }
 
 .page-container {
   position: relative;
   min-height: 100vh;
+  min-width: 440px;
 }
 
 .content-wrap {
-  padding-bottom: 270px;
+  padding: 123.22px 0px 270px 0px;
+  /* Header height */
   /* Footer height */
 }
 
@@ -21,7 +23,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #EEEFFB;
+  background: #eeeffb;
 }
 
 .container {
@@ -33,12 +35,12 @@ a {
 }
 
 a:hover {
-  color: #FB2E86;
+  color: #fb2e86;
 }
 
 button {
   color: white;
-  background: #FB2E86;
+  background: #fb2e86;
   border-radius: 2px;
   border: none;
   padding: 15px 40px;
@@ -46,19 +48,19 @@ button {
 }
 
 .pink {
-  color: #FB2E86;
+  color: #fb2e86;
 }
 
 .deepblue {
-  color: #2B2BF5;
+  color: #2b2bf5;
 }
 
 .lightblue {
-  color: #2BF5CC;
+  color: #2bf5cc;
 }
 
 .gray {
-  color: #8A8FB9;
+  color: #8a8fb9;
 }
 
 .left,
@@ -83,6 +85,14 @@ button {
   cursor: pointer;
 }
 
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 350px;
+}
+
 input,
 textarea {
   outline: none;
@@ -91,23 +101,29 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  font-family: 'Lato', sans-serif;
-  color: #8A8FB9;
+  font-family: "Lato", sans-serif;
+  color: #8a8fb9;
 }
 
-/* HeadingBar */
-.heading-bar-outer {
+/* Header */
+.header {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
-  height: 44px;
   width: 100%;
 }
 
+/* HeadingBar */
 .heading-bar {
-  color: #F1F1F1;
-  background: #7E33E0;
   display: flex;
   justify-content: flex-end;
+  color: #f1f1f1;
+  background: #7e33e0;
+}
+
+.heading-bar a {
+  color: #ffffff;
 }
 
 .heading-bar ul {
@@ -151,14 +167,12 @@ textarea::placeholder {
 }
 
 /* Navbar */
-.navbar-outer {
-  padding-top: 44px;
-}
-
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px -6px rgba(126, 51, 224, 0.15);
 }
 
 .navbar a {
@@ -166,7 +180,7 @@ textarea::placeholder {
 }
 
 .navbar a:hover {
-  color: #FB2E86;
+  color: #fb2e86;
 }
 
 .navbar ul {
@@ -188,7 +202,7 @@ textarea::placeholder {
 .search input {
   border: none;
   font-size: 1rem;
-  border: 1px solid #E7E6EF;
+  border: 1px solid #e7e6ef;
   height: 38px;
   width: 220px;
 }
@@ -215,7 +229,7 @@ textarea::placeholder {
 }
 
 .dropdown:hover .dropdown-toggle {
-  color: #FB2E86;
+  color: #fb2e86;
 }
 
 .dropdown-menu {
@@ -252,12 +266,12 @@ textarea::placeholder {
 
 .footer p {
   font-size: 1rem;
-  color: #8A8FB9;
+  color: #8a8fb9;
 }
 
 .footer h1 {
-  color: #FB2E86;
-  text-shadow: 0px 2px 0px #0D0E43;
+  color: #fb2e86;
+  text-shadow: 0px 2px 0px #0d0e43;
 }
 
 /* Service */
@@ -287,7 +301,7 @@ textarea::placeholder {
   text-align: center;
   margin: 60px 80px;
   line-height: 150%;
-  background: url('../images/Frame5.png') no-repeat;
+  background: url("../images/Frame5.png") no-repeat;
   background-size: auto;
   min-height: 400px;
 }
@@ -297,7 +311,7 @@ textarea::placeholder {
 }
 
 .done p {
-  color: #8D92A7;
+  color: #8d92a7;
   font-size: 1rem;
 }
 
@@ -312,7 +326,7 @@ textarea::placeholder {
 
 .circle {
   border: 3px solid hsla(323, 100%, 62%, 0.356);
-  border-top-color: #FB2E86;
+  border-top-color: #fb2e86;
   border-radius: 50%;
   width: 3em;
   height: 3em;
@@ -354,7 +368,7 @@ textarea::placeholder {
   align-items: center;
   padding: 5px 10px;
   background: #7e33e02a;
-  border-left: 4px solid #FB2E86;
+  border-left: 4px solid #fb2e86;
   right: -200px;
   transition: right 1s ease;
 }
@@ -376,15 +390,14 @@ textarea::placeholder {
 }
 
 .slick-dots li.slick-active button:before {
-  color: #FB2E86;
+  color: #fb2e86;
 }
 
 .slick-dots li button:before {
-  color: #FB2E86;
+  color: #fb2e86;
 }
 
 @media only screen and (max-width: 1024px) {
-
   /* Navbar */
   .search {
     display: none;

@@ -14,9 +14,9 @@ export default function Footer() {
                     <h4>Categories</h4>
                     <Link to='/products'><p>All products</p></Link>
                     <Link to='/categories/furniture'><p>Furniture</p></Link>
-                    <Link to='/categories/electronics'><p>Electronics</p></Link>
+                    <Link to='/categories/electronics'><p>Electronic</p></Link>
                     <Link to='/categories/bag'><p>Bag</p></Link>
-                    <Link to='/categories/accessories'><p>Accessories</p></Link>
+                    <Link to='/categories/accessories'><p>Accessory</p></Link>
                 </div>
                 <div className='footer-part'>
                     <h4>Customer Care</h4>

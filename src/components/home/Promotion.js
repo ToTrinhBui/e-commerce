@@ -12,7 +12,7 @@ export default function Promotion() {
                 <h4 className='pink'>Best Furniture For Your Castle...</h4>
                 <h1>New Furniture Collection Trends in 2023</h1>
                 <p className='gray'>Embrace 2023's hottest furniture trends with our new collection, blending style, comfort, and functionality for an elevated living experience.</p>
-                <Link to='/categories/funiture'><button>Shop Now</button></Link>
+                <Link to='/categories/furniture'><button>Shop Now</button></Link>
             </div>
             <img srcSet={`${promotion2} 1.75x`} alt='promotion' className='promotion-img2' />
         </div>

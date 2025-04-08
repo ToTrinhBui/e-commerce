@@ -111,7 +111,7 @@ export const products = [
         image: product10,
         description: 'Immerse yourself in a world of sound with these high-quality headphones. Featuring advanced audio technology and comfortable over-ear design, they deliver exceptional sound clarity and a comfortable listening experience for music enthusiasts and audio lovers.',
         available: '20',
-        category: 'electronics',
+        category: 'electronic',
         price: 100,
     },
     {
@@ -120,7 +120,7 @@ export const products = [
         image: product11,
         description: 'Capture precious moments with this high-quality camera. Whether you are a professional photographer or an enthusiastic hobbyist, this camera offers advanced features, excellent image quality, and intuitive controls to help you unleash your creativity.',
         available: '20',
-        category: 'electronics',
+        category: 'electronic',
         price: 200,
     },
     {
@@ -129,7 +129,7 @@ export const products = [
         image: product12,
         description: 'Add a touch of elegance to your wrist with this stylish watch. With its timeless design and reliable timekeeping, this watch complements both formal and casual attire, making it a versatile accessory for any occasion.',
         available: '20',
-        category: 'accessories',
+        category: 'accessory',
         price: 100,
     },
     {
@@ -138,7 +138,7 @@ export const products = [
         image: product13,
         description: 'Stay connected and monitor your health with this feature-packed smartwatch. From tracking your fitness goals to receiving notifications on the go, this smartwatch combines functionality and style, enhancing your everyday life.',
         available: '20',
-        category: 'electronics',
+        category: 'electronic',
         price: 100,
     },
     {
@@ -147,7 +147,7 @@ export const products = [
         image: product14,
         description: 'Experience premium audio quality and immersive sound with these Beats headphones. Designed for music enthusiasts, these headphones deliver deep bass, crisp highs, and comfortable wear, allowing you to enjoy your favorite music with exceptional clarity.',
         available: '20',
-        category: 'electronics',
+        category: 'electronic',
         price: 100,
     },
 ]

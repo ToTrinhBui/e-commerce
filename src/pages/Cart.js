@@ -1,16 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
-
 import '../style/index.css';
 import '../style/cart.css';
-
 import { products } from "../data";
-
 import { CartContext } from "../context/CartContext";
-
-import HeadingBar from "../components/HeadingBar";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Total from '../components/cart/Total';
+import { Header } from '../components/Header';
 
 export default function Cart() {
     const [productInCart, setProductInCart] = useState([]);
@@ -33,9 +28,8 @@ export default function Cart() {
 
     return (
         <div className='page-container'>
+            <Header />
             <div className='content-wrap'>
-                <HeadingBar />
-                <Navbar />
                 <Total
                     data={productInCart} total={totalAmount}
                     clearCart={clearCart} addToCart={addToCart}

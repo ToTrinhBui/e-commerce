@@ -56,7 +56,7 @@ export default function FeaturedProduct(props) {
                             </div>
                             <Link to={`/detail/${product.id}`}>
                                 <div className='featured-card-in4'>
-                                    <h4 className="pink">{product.name}</h4>
+                                    <h4 className="pink truncate" style={{ display: '-webkit-box', WebkitLineClamp: '1' }}>{product.name}</h4>
                                     <img src={require('../../images/line.png')}
                                         alt='line-decor' />
                                     <p>Code - {product.id}</p>

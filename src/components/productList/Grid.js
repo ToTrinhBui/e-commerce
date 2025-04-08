@@ -34,14 +34,14 @@ export default function Grid(props) {
                                 <svg width="21px" height="21px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path stroke="#0084ff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m20 20-4.05-4.05m0 0a7 7 0 1 0-9.9-9.9 7 7 0 0 0 9.9 9.9zM8 11h3m3 0h-3m0 0V8m0 3v3"></path></g></svg>
                             </Link>
                         </div>
-                        <div className=''>
+                        <div>
                             <img src={product.image}
                                 alt='product' style={{ width: '150px', height: '150px' }} className='card-grid-product-img' />
                         </div>
                     </div>
                     <Link to={`/detail/${product.id}`}>
                         <div className='card-grid-text'>
-                            <h5>{product.name}</h5>
+                            <h5 className='truncate'>{product.name}</h5>
                             <div className='decor-box'>
                                 <div className='decor'></div>
                                 <div className='decor'></div>
